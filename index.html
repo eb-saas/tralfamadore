@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KILL IT ALL | WHATEVERERS</title>
+    <title>KILL IT ALL | THE WHATEVERERS</title>
     <style>
         :root {
             --t: 0;
             --r: 0;
+            --r2: 0;
         }
         span {
             display: inline-block;
@@ -28,7 +29,7 @@
             width: 20rem;
             height: 20rem;
             image-rendering: pixelated;
-            transform: rotate(calc(var(--r)*1deg));
+            transform: rotate(calc(var(--r2)*1deg));
         }
         h2 {
             text-align: center;
@@ -38,42 +39,51 @@
             color: hsl(0, 100%, 50%);
             transform: skewY(calc(var(--r)*1deg)) skewX(calc(-1*var(--r)*1deg))
         }
+        #note {
+            color: rgb(62, 62, 62);
+        }
     </style>
 </head>
 <body>
     <h2>LET GO OF WHAT YOU KNOW ; WRITE IN PERMENAT INK ; DESTROY IT WHEN DONE AND DO IT AGAIN ; NOW ; KILL IT ALL</h2>
     <div id="int-container">
-    <p id="poem"></p>
-    <div>
-        <img src="./media/1.png" id="int-image">
-        <div id="about">
-            <p>
-                they all write in premanent ink
-                <br>& when they are done writing
-                <br>they destroy it all & write it again
-            </p>
-            <p>
-                they all draw in permment ink
-                <br>& when they are done drawing
-                <br>they destroy it & draw it again
-            </p>
-            <p>
-                the words aren't good & the
-                <br>drawings are worse. the writing
-                <br>& drawing is beautiful, though
-            </p>
+        <p id="poem"></p>
+        <div>
+            <img src="./media/1.png" id="int-image">
+            <div id="about">
+                <p>
+                    they all write in premanent ink
+                    <br>& when they are done writing
+                    <br>they destroy it all & write it again
+                </p>
+                <p>
+                    they all draw in permment ink
+                    <br>& when they are done drawing
+                    <br>they destroy it & draw it again
+                </p>
+                <p>
+                    the words aren't good & the
+                    <br>drawings are worse. the writing
+                    <br>& drawing is beautiful, though
+                </p>
+                <p>
+                    they make many mistakes;
+                    <br>except they were’nt.
+                </p>
+            </div>
+        </div>
+        <div style="display: none">
+            <img src="./media/1.png">
+            <img src="./media/2.png">
+            <img src="./media/3.png">
+            <img src="./media/4.png">
+            <img src="./media/5.png">
+            <img src="./media/6.png">
+            <img src="./media/7.png">
+            <img src="./media/8.png">
         </div>
     </div>
-    <div style="display: none">
-        <img src="./media/1.png">
-        <img src="./media/2.png">
-        <img src="./media/3.png">
-        <img src="./media/4.png">
-        <img src="./media/5.png">
-        <img src="./media/6.png">
-        <img src="./media/7.png">
-        <img src="./media/8.png">
-    </div>
+    <p id="note"><i>Explorer’s note: These creatures appear to have no set form. They constantly shift forms, except for their eyes, which remain the same no matter which form they take. I am not sure as what they call themselves, as every time I ask a different one I get a different answer. I have taken to calling them the “Whateverers” for their lack of care in defining themselves.</i></p>
 </body>
     <script>
         const poemText = `Why is your room so messy?
@@ -144,6 +154,7 @@ I don’t know, really.`
             image.src = `./media/${(Math.floor(time/30))%8+1}.png`
             root.style.setProperty("--t", time)
             root.style.setProperty("--r", Math.random())
+            root.style.setProperty("--r2", Math.random())
             time++
         }
 
