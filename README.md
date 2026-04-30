@@ -1,3 +1,3 @@
 # tralfamadore
-art project
-[view](https://eb-saas.github.io/tralfamadore/)
+art project.
+[view](https://eb-saas.github.io/tralfamadore/) it
